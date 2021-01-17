@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinSQLite"
+             x:Class="TPFinal.MainPage">
+
+    <StackLayout>
+        <StackLayout>
+            <StackLayout Padding="10,10,10,10" HorizontalOptions="Center" VerticalOptions="Start">
+                <Button x:Name="btnLocalizacao" Text="Mostrar minha Localização" Clicked="BtnLocalizacao_Clicked"/>
+                <Label Margin="0,10,0,10" Text="Biblioteca IFSP" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Label Margin="0,6,0,10" Text="Créditos: Saulo Silva Castilhos" FontAttributes="Bold" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <StackLayout  HorizontalOptions="StartAndExpand"  Orientation="Horizontal">
+                    <Entry x:Name="txtBookId" Placeholder="ID do Livro" WidthRequest="100"></Entry>
+                    <Entry x:Name="txtBookName" Placeholder="Nome do Livro" WidthRequest="230"></Entry>
+                </StackLayout>
+                <Entry x:Name="txtBookISBN" Placeholder="ISBN"></Entry>
+                <Entry x:Name="txtBookAuthor" Placeholder="Nome do Autor"></Entry>
+                <Entry x:Name="txtBookAuthorEmail" Placeholder="E-mail do Autor"></Entry>
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAdd" WidthRequest="160" Text="Criar" Clicked="BtnAdd_Clicked" />
+                    <Button x:Name="btnRead" WidthRequest="160" Text="Ler" Clicked="BtnRead_Clicked" />
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnUpdate" WidthRequest="160" Text="Atualizar" Clicked="BtnUpdate_Clicked"/>
+                    <Button x:Name="btnDelete" WidthRequest="160" Text="Deletar" Clicked="BtnDelete_Clicked" />
+                </StackLayout>
+                <ListView x:Name="lstBooks">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding BookName}" Detail="{Binding BookId}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
