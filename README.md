@@ -2,5 +2,5 @@
 
 Download Vídeo
 
-https://github.com/saulocastillos/TPFinalDispositivosMoveis/blob/master/tp%20final%20dispositivos%20moveis.mp4
+https://github.com/saulocastillos/TPFinalDispositivosMoveis/blob/master/tp%20final%20dispositivos%20moveis.mp4?raw=true
 
